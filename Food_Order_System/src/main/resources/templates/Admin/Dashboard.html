@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<title>Product Dashboard</title>
+<script src="https://cdn.tailwindcss.com">
+  </script>
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+	rel="stylesheet" />
+<link
+	href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap"
+	rel="stylesheet" />
+<style>
+body {
+	font-family: 'Inter', sans-serif;
+}
+</style>
+</head>
+<body class="bg-gray-100">
+	<div class="flex h-screen">
+		<!-- Sidebar -->
+		<div class="w-64 bg-white shadow-md">
+			<div class="p-6">
+
+				<nav>
+					<ul>
+						<li class="mb-4"><a
+							class="flex items-center text-gray-600 hover:text-blue-500"
+							href="#"> <i class="fas fa-tachometer-alt mr-3"> </i>
+								Dashboard
+						</a></li>
+						<li class="mb-4"><a
+							class="flex items-center text-gray-600 hover:text-blue-500"
+							href="#"> <i class="fas fa-shopping-cart mr-3"> </i> Order
+						</a></li>
+						<li class="mb-4"><a class="flex items-center text-blue-500"
+							href="#"> <i class="fas fa-box mr-3"> </i> Product
+						</a></li>
+						<li class="mb-4"><a
+							class="flex items-center text-gray-600 hover:text-blue-500"
+							href="#"> <i class="fas fa-users mr-3"> </i> Customer
+						</a></li>
+						<li class="mb-4"><a
+							class="flex items-center text-gray-600 hover:text-blue-500"
+							href="Admin/Contactuus"> <i class="fas fa-user-tie mr-3"> </i> ContactUs
+						</a></li>
+						<li class="mb-4"><a
+							class="flex items-center text-gray-600 hover:text-blue-500"
+							href="#"> <i class="fas fa-file-invoice-dollar mr-3"> </i>
+								Billing
+						</a></li>
+						<li class="mb-4"><a
+							class="flex items-center text-gray-600 hover:text-blue-500"
+							href="#"> <i class="fas fa-chart-line mr-3"> </i> Analytics
+						</a></li>
+						<li class="mb-4"><a
+							class="flex items-center text-gray-600 hover:text-blue-500"
+							href="#"> <i class="fas fa-cog mr-3"> </i> Setting
+						</a></li>
+						<li class="mb-4"><a
+							class="flex items-center text-gray-600 hover:text-blue-500"
+							href="#"> <i class="fas fa-question-circle mr-3"> </i> Help
+						</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="p-6">
+				<a class="flex items-center text-gray-600 hover:text-blue-500"
+					href="#"> <i class="fas fa-sign-out-alt mr-3"> </i> Log out
+				</a>
+			</div>
+		</div>
+		<!-- Main Content -->
+		<div class="flex-1 p-6">
+			<div class="flex justify-between items-center mb-6">
+				<div class="relative w-1/2">
+					<input
+						class="w-full p-3 pl-10 rounded-lg shadow-sm border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+						placeholder="Search" type="text" /> <i
+						class="fas fa-search absolute left-3 top-3 text-gray-400"> </i>
+				</div>
+				<div class="flex items-center space-x-4">
+					<button class="p-2 bg-gray-100 rounded-full hover:bg-gray-200">
+						<i class="fas fa-bell text-gray-600"> </i>
+					</button>
+					<div class="flex items-center space-x-2">
+						<img alt="User avatar" class="w-10 h-10 rounded-full" height="40"
+							src="https://storage.googleapis.com/a1aa/image/9Hv9vXlQWNtyoduS54Y8XqW5PjNcRnzWXVDAWhDzLoQ.jpg"
+							width="40" />
+						<div>
+							<p class="text-gray-800 font-semibold">Jane Cooper</p>
+							<p class="text-gray-500 text-sm">jane.cooper@example.com</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bg-white p-6 rounded-lg shadow-md">
+				<div class="flex justify-between items-center mb-4">
+					<h2 class="text-xl font-semibold text-gray-800">Product</h2>
+					<div class="flex items-center space-x-4">
+						<div class="flex items-center space-x-2">
+							<span class="text-gray-600"> Showing </span> <select
+								class="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+								<option>10</option>
+								<option>20</option>
+								<option>30</option>
+							</select>
+						</div>
+						<button class="p-2 bg-gray-100 rounded-lg hover:bg-gray-200">
+							<i class="fas fa-filter text-gray-600"> </i> Filter
+						</button>
+						<button class="p-2 bg-gray-100 rounded-lg hover:bg-gray-200">
+							<i class="fas fa-file-export text-gray-600"> </i> Export
+						</button>
+						<a href="/AddProduct"
+							class="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 inline-flex items-center">
+							<i class="fas fa-plus mr-2"></i> Add New Product
+						</a>
+					</div>
+				</div>
+				<table class="w-full text-left">
+					<thead>
+						<tr>
+							<th class="py-2 px-4 border-b">Product Name</th>
+							<th class="py-2 px-4 border-b">Product ID</th>
+							<th class="py-2 px-4 border-b">Price</th>
+							<th class="py-2 px-4 border-b">Stock</th>
+							<th class="py-2 px-4 border-b">Type</th>
+							<th class="py-2 px-4 border-b">Status</th>
+							<th class="py-2 px-4 border-b">Action</th>
+						</tr>
+					</thead>
+
+				</table>
+				<div class="flex justify-between items-center mt-4">
+					<button class="p-2 bg-gray-100 rounded-lg hover:bg-gray-200">
+						<i class="fas fa-chevron-left text-gray-600"> </i> Previous
+					</button>
+					<div class="flex space-x-2">
+						<button class="p-2 bg-blue-500 text-white rounded-lg">01
+						</button>
+						<button class="p-2 bg-gray-100 rounded-lg hover:bg-gray-200">
+							02</button>
+						&lt;button class="p-2 bg-gray
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
