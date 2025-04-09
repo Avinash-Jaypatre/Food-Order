@@ -44,7 +44,7 @@ A web-based Food Order System designed to simplify the online food ordering expe
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/Food_Order_System.git
+   git clone https://github.com/Avinash-Jaypatre/Food-Order.git
    cd Food_Order_System
 
 
