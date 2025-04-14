@@ -1,25 +1,30 @@
 package com.example.Food.adminentity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Lob;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
-@Table(name = "`Product`") // Escape the table name
+@Table(name = "products") // 👈 Custom table name
 public class Product {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "name")
     private String name;
-    private Double price;
-    private Integer quantity;
+
+    @Column(name = "price")
+    private double price;
+
+    @Column(name = "quantity")
+    private int quantity;
+
+    @Column(name = "description", length = 1000)
     private String description;
 
     @Lob
-    private byte[] image; // For storing image as byte array
+    @Column(name = "image", columnDefinition = "LONGBLOB")
+    private byte[] image;
 
     // Getters and Setters
     public Long getId() {
@@ -38,19 +43,19 @@ public class Product {
         this.name = name;
     }
 
-    public Double getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
-    public Integer getQuantity() {
+    public int getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(Integer quantity) {
+    public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 

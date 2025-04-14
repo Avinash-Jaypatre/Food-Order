@@ -26,6 +26,6 @@ public class OrderController {
     @PostMapping
     public String placeOrder(Order order) {
         orderService.saveOrder(order);
-        return "redirect:/confirmation"; // Redirect to a confirmation page after placing the order
+        return "redirect:/Ordersucces"; // Redirect to a confirmation page after placing the order
     }
 }

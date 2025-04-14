@@ -6,14 +6,40 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.example.Food.Entity.User;
+import com.example.Food.Repository.UserRepository;
+
 @Controller
 public class FoodController {
 
-	@GetMapping("/login")
-	public String login() {
-		return "login";
-	}
+//	@GetMapping("/login")
+//	public String login() {
+//		return "login";
+//	}
 
+	
+	 @Autowired
+	    private UserRepository userRepository;
+
+	    // ================== AUTH ==================
+
+	    @GetMapping("/")
+	    public String showRegistrationForm() {
+	        return "registration"; // registration.html or registration.jsp
+	    }
+
+	    @PostMapping("/")
+	    public String registerUser(@ModelAttribute User user) {
+	        userRepository.save(user);
+	        return "redirect:/login";
+	    }
+
+	    @GetMapping("/login")
+	    public String loginPage() {
+	        return "login"; // login.html or login.jsp
+	    }
+    
+	
 	@GetMapping("/home")
 	public String homepage() {
 		return "Home";
@@ -73,6 +99,11 @@ public class FoodController {
     public String contactfetch() {
         return "Admin/Contactuus"; // Return your contact.jsp or contact.html
     }
+	
+//	@GetMapping("/")
+//	public String registration() {
+//		return "registration";
+//	}
 	
 	
 

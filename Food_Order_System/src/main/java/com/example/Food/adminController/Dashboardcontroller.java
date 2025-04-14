@@ -11,6 +11,8 @@ public class Dashboardcontroller
 	        return "Admin/Dashboard";
 	    }
 	  
-	  
-
+//	 	  @GetMapping("/AddProduct")
+//		    public String AddProduct() {
+//		        return "Admin/AddProduct";
+//		    }
 }
